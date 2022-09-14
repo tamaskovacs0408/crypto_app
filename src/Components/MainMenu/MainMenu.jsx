@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import uuid from "react-uuid";
+import {COIN_API} from '../../../API'
 import BTC from '../BTC/BTC';
 import ETH from '../ETH/ETH';
 import BNB from '../BNB/BNB';
