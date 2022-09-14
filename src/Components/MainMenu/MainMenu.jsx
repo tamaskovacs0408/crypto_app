@@ -11,9 +11,25 @@ import Doge from '../Doge/Doge';
 import SOL from '../SOL/SOL';
 
 export default function MainMenu() {
+  const [coinData, setCoinData] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${COIN_API}`)
+      .then(res => setCoinData(res.data))
+      .catch(err => console.log(err))
+  }, []);
+
+
   return (
     <div className="main_menu_container">
-      <BTC />
+      {coinData
+          .filter(coin => coin.symbol === 'BTCUSDT')
+          .map(data => {
+            return <BTC 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
       <ETH />
       <BNB />
       <ADA />
