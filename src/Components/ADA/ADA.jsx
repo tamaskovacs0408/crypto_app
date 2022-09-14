@@ -8,7 +8,8 @@ export default function ADA({data}) {
         {/* <button>Current price</button> */}
       </div>
       <div className="crypto_price">
-        <p>{parseFloat(data.lastPrice).toFixed(3)} $ {parseFloat(data.priceChangePercent).toFixed(1)} %</p>
+        <p>{parseFloat(data.lastPrice).toFixed(3)} $</p>
+        <p>{parseFloat(data.priceChangePercent).toFixed(1)} %</p>
       </div>
     </div>
   );
