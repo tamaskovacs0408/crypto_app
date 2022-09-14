@@ -8,7 +8,7 @@ export default function Doge({data}) {
         <button>Current price</button>
       </div>
       <div className="crypto_price">
-        <p>{data.lastPrice}</p>
+        <p>{parseFloat(data.lastPrice).toFixed(4)} $</p>
       </div>
     </div>
   );

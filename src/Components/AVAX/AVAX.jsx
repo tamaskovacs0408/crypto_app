@@ -8,7 +8,7 @@ export default function AVAX({data}) {
         <button>Current price</button>
       </div>
       <div className="crypto_price">
-        <p>{data.lastPrice}</p>
+        <p>{parseFloat(data.lastPrice).toFixed(2)} $</p>
       </div>
     </div>
   );
