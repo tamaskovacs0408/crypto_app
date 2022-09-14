@@ -30,12 +30,54 @@ export default function MainMenu() {
               data={data}/>
           }   
         )}
-      <ETH />
-      <BNB />
-      <ADA />
-      <AVAX />
-      <Doge />
-      <SOL />
+      {coinData
+          .filter(coin => coin.symbol === 'ETHUSDT')
+          .map(data => {
+            return <ETH 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
+      {coinData
+          .filter(coin => coin.symbol === 'BNBUSDT')
+          .map(data => {
+            return <BNB 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
+      {coinData
+          .filter(coin => coin.symbol === 'ADAUSDT')
+          .map(data => {
+            return <ADA 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
+      {coinData
+          .filter(coin => coin.symbol === 'AVAXUSDT')
+          .map(data => {
+            return <AVAX 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
+      {coinData
+          .filter(coin => coin.symbol === 'DOGEUSDT')
+          .map(data => {
+            return <Doge 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
+      {coinData
+          .filter(coin => coin.symbol === 'SOLUSDT')
+          .map(data => {
+            return <SOL 
+              key={uuid()}
+              data={data}/>
+          }   
+        )}
     </div>
   );
 }

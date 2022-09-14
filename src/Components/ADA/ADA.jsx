@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ADA() {
+export default function ADA({data}) {
   return (
     <div className="crypto_container">
       <div className="crypto_name">
@@ -8,7 +8,7 @@ export default function ADA() {
         <button>Current price</button>
       </div>
       <div className="crypto_price">
-        <p>price</p>
+        <p>{data.lastPrice}</p>
       </div>
     </div>
   );
