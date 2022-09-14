@@ -5,7 +5,7 @@ export default function BTC({data}) {
     <div className="crypto_container">
       <div className="crypto_name">
         <h2>Bitcoin</h2>
-        <button>Current price</button>
+        {/* <button>Current price</button> */}
       </div>
       <div className="crypto_price">
         <p>{parseFloat(data.lastPrice).toFixed(2)} $</p>
