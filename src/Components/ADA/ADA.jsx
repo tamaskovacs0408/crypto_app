@@ -2,6 +2,8 @@ import React from "react";
 import './style.css';
 
 export default function ADA({data}) {
+  let priceChange = data.priceChangePercent;
+
   return (
     <div className="crypto_container">
       <div className="crypto_name">
@@ -10,7 +12,7 @@ export default function ADA({data}) {
       </div>
       <div className="crypto_price">
         <p>{parseFloat(data.lastPrice).toFixed(3)} $</p>
-        <p>{parseFloat(data.priceChangePercent).toFixed(1)} %</p>
+        <p style={{color: (priceChange < 0) ? 'red' : '#169c11'}}>{parseFloat(priceChange).toFixed(1)} %</p>
       </div>
     </div>
   );
