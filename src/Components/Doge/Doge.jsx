@@ -11,7 +11,7 @@ export default function Doge({data}) {
         {/* <button>Current price</button> */}
       </div>
       <div className="crypto_price">
-        <p>{parseFloat(data.lastPrice).toFixed(4)} $</p>
+        <p>{parseFloat(data.lastPrice).toFixed(5)} $</p>
         <p style={{color: (priceChange < 0) ? 'red' : '#169c11'}}>{parseFloat(priceChange).toFixed(1)} %</p>
       </div>
     </div>
