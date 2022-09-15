@@ -1,10 +1,11 @@
 import React from "react";
+import './style.css';
 
 export default function BNB({data}) {
   return (
     <div className="crypto_container">
       <div className="crypto_name">
-        <h2>BNB</h2>
+        <h2 className="BNB">BNB</h2>
         {/* <button>Current price</button> */}
       </div>
       <div className="crypto_price">

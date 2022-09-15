@@ -1,10 +1,11 @@
 import React from "react";
+import './style.css';
 
 export default function SOL({data}) {
   return (
     <div className="crypto_container">
       <div className="crypto_name">
-        <h2>Solana</h2>
+        <h2 className="SOL">Solana</h2>
         {/* <button>Current price</button> */}
       </div>
       <div className="crypto_price">
