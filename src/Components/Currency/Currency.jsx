@@ -1,5 +1,5 @@
 import React from "react";
-//import "./style.css";
+import "./index.scss";
 import {
   Accordion,
   AccordionItemHeading,
@@ -33,8 +33,8 @@ export default function Currency({ data }) {
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <div className="more_information_container">
-              <div className="volume">
+            <div className="data_container">
+              <div className="datas">
                 <p>Market cap: {data.quotes.USD.market_cap}</p>
                 <p>Circulating supply: {data.circulating_supply}</p>
                 <p>All Time High price: {data.quotes.USD.ath_price}</p>

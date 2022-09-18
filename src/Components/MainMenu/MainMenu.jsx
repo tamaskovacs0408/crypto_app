@@ -1,8 +1,9 @@
+import "./index.scss";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import uuid from "react-uuid";
 import { COIN_API } from "../API";
-import { COIN_DATA_API } from "../API";
+// import { COIN_DATA_API } from "../API";
 import Currency from "../Currency/Currency";
 // import BTC from "../BTC/BTC";
 // import ETH from "../ETH/ETH";

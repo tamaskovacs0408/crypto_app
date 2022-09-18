@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import MainMenu from './Components/MainMenu/MainMenu';
 
 function App() {
