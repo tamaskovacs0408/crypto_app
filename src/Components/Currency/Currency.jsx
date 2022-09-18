@@ -22,6 +22,7 @@ export default function Currency({ data }) {
                 <div className="crypto_name">
                   <span>{data.rank}</span>
                   <h2>{data.name}</h2>
+                  <p>{data.symbol}</p>
                 </div>
                 <div className="crypto_price">
                   <p>{parseFloat(data.quotes.USD.price).toFixed(2)} $</p>
