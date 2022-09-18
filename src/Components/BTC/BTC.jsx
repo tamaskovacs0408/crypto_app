@@ -30,6 +30,13 @@ export default function BTC({ data }) {
               </div>
             </AccordionItemButton>
           </AccordionItemHeading>
+          <AccordionItemPanel>
+            <div className="more_information_container">
+              <div className="volume">
+                <p>Volume: {data.volume}</p>
+              </div>
+            </div>
+          </AccordionItemPanel>
         </AccordionItem>
       </Accordion>
     </div>
