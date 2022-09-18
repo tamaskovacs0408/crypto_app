@@ -16,10 +16,10 @@ export default function MainMenu() {
   const [coinInfo, setCoinInfo] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`${COIN_DATA_API}`)
-      .then((res) => setCoinInfo(res.data))
-      .catch((err) => console.log(err));
+    // axios
+    //   .get(`${COIN_DATA_API}`)
+    //   .then((res) => setCoinInfo(res.data))
+    //   .catch((err) => console.log(err));
 
 
     axios
@@ -27,50 +27,50 @@ export default function MainMenu() {
         .then((res) => setCoinData(res.data))
         .catch((err) => console.log(err));
 
-    const interval = setInterval(() => {
-      axios
-        .get(`${COIN_API}`)
-        .then((res) => setCoinData(res.data))
-        .catch((err) => console.log(err));
-    }, 10000);
+    // const interval = setInterval(() => {
+    //   axios
+    //     .get(`${COIN_API}`)
+    //     .then((res) => setCoinData(res.data))
+    //     .catch((err) => console.log(err));
+    // }, 20000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="main_menu_container">
-      {coinInfo
+      {coinData
         .filter((coin) => coin.id === "btc-bitcoin")
         .map((data) => {
           return <BTC key={uuid()} data={data} />;
         })}
       {coinData
-        .filter((coin) => coin.symbol === "ETHUSDT")
+        .filter((coin) => coin.id === "eth-ethereum")
         .map((data) => {
           return <ETH key={uuid()} data={data} />;
         })}
       {coinData
-        .filter((coin) => coin.symbol === "BNBUSDT")
+        .filter((coin) => coin.id === "bnb-binance-coin")
         .map((data) => {
           return <BNB key={uuid()} data={data} />;
         })}
       {coinData
-        .filter((coin) => coin.symbol === "ADAUSDT")
+        .filter((coin) => coin.id === "ada-cardano")
         .map((data) => {
           return <ADA key={uuid()} data={data} />;
         })}
       {coinData
-        .filter((coin) => coin.symbol === "AVAXUSDT")
+        .filter((coin) => coin.id === "avax-avalanche")
         .map((data) => {
           return <AVAX key={uuid()} data={data} />;
         })}
       {coinData
-        .filter((coin) => coin.symbol === "DOGEUSDT")
+        .filter((coin) => coin.id === "doge-dogecoin")
         .map((data) => {
           return <Doge key={uuid()} data={data} />;
         })}
       {coinData
-        .filter((coin) => coin.symbol === "SOLUSDT")
+        .filter((coin) => coin.id === "sol-solana")
         .map((data) => {
           return <SOL key={uuid()} data={data} />;
         })}

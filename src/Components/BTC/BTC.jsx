@@ -19,7 +19,7 @@ export default function BTC({ data }) {
             <AccordionItemButton>
               <div className="crypto_container">
                 <div className="crypto_name">
-                  <h2 className="BTC">Bitcoin</h2>
+                  <h2 className="BTC">{data.name}</h2>
                 </div>
                 <div className="crypto_price">
                   <p>{parseFloat(data.quotes.USD.price).toFixed(2)} $</p>
