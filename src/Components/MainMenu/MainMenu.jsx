@@ -3,6 +3,7 @@ import axios from "axios";
 import uuid from "react-uuid";
 import { COIN_API } from "../API";
 import { COIN_DATA_API } from "../API";
+import Currency from "../Currency/Currency";
 import BTC from "../BTC/BTC";
 import ETH from "../ETH/ETH";
 import BNB from "../BNB/BNB";
@@ -13,33 +14,31 @@ import SOL from "../SOL/SOL";
 
 export default function MainMenu() {
   const [coinData, setCoinData] = useState([]);
-  const [coinInfo, setCoinInfo] = useState([]);
 
   useEffect(() => {
-    // axios
-    //   .get(`${COIN_DATA_API}`)
-    //   .then((res) => setCoinInfo(res.data))
-    //   .catch((err) => console.log(err));
-
-
     axios
         .get(`${COIN_API}`)
         .then((res) => setCoinData(res.data))
         .catch((err) => console.log(err));
 
-    // const interval = setInterval(() => {
-    //   axios
-    //     .get(`${COIN_API}`)
-    //     .then((res) => setCoinData(res.data))
-    //     .catch((err) => console.log(err));
-    // }, 20000);
+    const interval = setInterval(() => {
+      axios
+        .get(`${COIN_API}`)
+        .then((res) => setCoinData(res.data))
+        .catch((err) => console.log(err));
+    }, 100000);
 
-    // return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="main_menu_container">
       {coinData
+        .filter((coin) => coin.rank <= 30).sort((coin1, coin2) => coin1.rank - coin2.rank)
+        .map((data) => {
+          return <Currency key={uuid()} data={data} />;
+        })}
+      {/* {coinData
         .filter((coin) => coin.id === "btc-bitcoin")
         .map((data) => {
           return <BTC key={uuid()} data={data} />;
@@ -73,7 +72,7 @@ export default function MainMenu() {
         .filter((coin) => coin.id === "sol-solana")
         .map((data) => {
           return <SOL key={uuid()} data={data} />;
-        })}
+        })} */}
     </div>
   );
 }

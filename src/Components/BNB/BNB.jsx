@@ -1,5 +1,12 @@
 import React from "react";
 import './style.css';
+import {
+  Accordion,
+  AccordionItemHeading,
+  AccordionItem,
+  AccordionItemPanel,
+  AccordionItemButton,
+} from "react-accessible-accordion";
 
 export default function BNB({data}) {
   let priceChange = data.priceChangePercent;
