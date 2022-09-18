@@ -4,13 +4,13 @@ import uuid from "react-uuid";
 import { COIN_API } from "../API";
 import { COIN_DATA_API } from "../API";
 import Currency from "../Currency/Currency";
-import BTC from "../BTC/BTC";
-import ETH from "../ETH/ETH";
-import BNB from "../BNB/BNB";
-import ADA from "../ADA/ADA";
-import AVAX from "../AVAX/AVAX";
-import Doge from "../Doge/Doge";
-import SOL from "../SOL/SOL";
+// import BTC from "../BTC/BTC";
+// import ETH from "../ETH/ETH";
+// import BNB from "../BNB/BNB";
+// import ADA from "../ADA/ADA";
+// import AVAX from "../AVAX/AVAX";
+// import Doge from "../Doge/Doge";
+// import SOL from "../SOL/SOL";
 
 export default function MainMenu() {
   const [coinData, setCoinData] = useState([]);
@@ -21,14 +21,14 @@ export default function MainMenu() {
         .then((res) => setCoinData(res.data))
         .catch((err) => console.log(err));
 
-    const interval = setInterval(() => {
-      axios
-        .get(`${COIN_API}`)
-        .then((res) => setCoinData(res.data))
-        .catch((err) => console.log(err));
-    }, 100000);
+    // const interval = setInterval(() => {
+    //   axios
+    //     .get(`${COIN_API}`)
+    //     .then((res) => setCoinData(res.data))
+    //     .catch((err) => console.log(err));
+    // }, 100000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   return (

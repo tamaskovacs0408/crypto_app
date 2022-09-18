@@ -9,7 +9,8 @@ import {
 } from "react-accessible-accordion";
 
 export default function Currency({ data }) {
-  let priceChange = data.quotes.USD.volume_24h_change_24h;
+  let priceChange = data.quotes.USD.percent_change_24h;
+  let athDate = data.quotes.USD.ath_date.split('T')[0];
 
   return (
     <div className="accordion_container">
@@ -34,7 +35,10 @@ export default function Currency({ data }) {
           <AccordionItemPanel>
             <div className="more_information_container">
               <div className="volume">
-                <p>Market cap: {data.max_supply}</p>
+                <p>Market cap: {data.quotes.USD.market_cap}</p>
+                <p>Circulating supply: {data.circulating_supply}</p>
+                <p>All Time High price: {data.quotes.USD.ath_price}</p>
+                <p>All Time High price date: {athDate}</p>
               </div>
             </div>
           </AccordionItemPanel>
