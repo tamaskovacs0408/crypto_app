@@ -9,7 +9,7 @@ import {
 } from "react-accessible-accordion";
 
 export default function BTC({ data }) {
-  let priceChange = data.priceChangePercent;
+  let priceChange = data.quotes.USD.volume_24h_change_24h;
 
   return (
     <div className="accordion_container">
@@ -22,7 +22,7 @@ export default function BTC({ data }) {
                   <h2 className="BTC">Bitcoin</h2>
                 </div>
                 <div className="crypto_price">
-                  <p>{parseFloat(data.lastPrice).toFixed(2)} $</p>
+                  <p>{parseFloat(data.quotes.USD.price).toFixed(2)} $</p>
                   <p style={{ color: priceChange < 0 ? "red" : "#169c11" }}>
                     {parseFloat(priceChange).toFixed(1)} %
                   </p>
@@ -34,6 +34,7 @@ export default function BTC({ data }) {
             <div className="more_information_container">
               <div className="volume">
                 <p>Volume: {data.volume}</p>
+                <p>Market cap: {data.max_supply}</p>
               </div>
             </div>
           </AccordionItemPanel>

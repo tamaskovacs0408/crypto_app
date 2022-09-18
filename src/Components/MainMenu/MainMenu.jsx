@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import uuid from "react-uuid";
 import { COIN_API } from "../API";
+import { COIN_DATA_API } from "../API";
 import BTC from "../BTC/BTC";
 import ETH from "../ETH/ETH";
 import BNB from "../BNB/BNB";
@@ -12,8 +13,15 @@ import SOL from "../SOL/SOL";
 
 export default function MainMenu() {
   const [coinData, setCoinData] = useState([]);
+  const [coinInfo, setCoinInfo] = useState([]);
 
   useEffect(() => {
+    axios
+      .get(`${COIN_DATA_API}`)
+      .then((res) => setCoinInfo(res.data))
+      .catch((err) => console.log(err));
+
+
     axios
         .get(`${COIN_API}`)
         .then((res) => setCoinData(res.data))
@@ -31,8 +39,8 @@ export default function MainMenu() {
 
   return (
     <div className="main_menu_container">
-      {coinData
-        .filter((coin) => coin.symbol === "BTCUSDT")
+      {coinInfo
+        .filter((coin) => coin.id === "btc-bitcoin")
         .map((data) => {
           return <BTC key={uuid()} data={data} />;
         })}
