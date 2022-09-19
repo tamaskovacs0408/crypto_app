@@ -7,10 +7,15 @@ export default function SignUp() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
+  function handleFormSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="form_container">
-      <form>
+      <form >
         <label htmlFor="e-mail">
+          Email:
           <input
             id="e-mail"
             type="email"
