@@ -3,14 +3,22 @@ import { useState, useEffect } from "react";
 import "./index.scss";
 
 export default function SignUp() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState(() => {
+    const saved = localStorage.getItem("username");
+    const initialValue = saved;
+    return initialValue || "";
+  });
+  const [password, setPassword] = useState(() => {
+    const saved = localStorage.getItem("password");
+    const initialValue = saved;
+    return initialValue || "";
+  });
 
   useEffect(() => {
-    localStorage.setItem("username", JSON.stringify(username))
+    localStorage.setItem("username", username);
   }, [username]);
   useEffect(() => {
-    localStorage.setItem("password", JSON.stringify(password))
+    localStorage.setItem("password", password);
   }, [password]);
 
   return (
@@ -42,7 +50,7 @@ export default function SignUp() {
           />
         </label>
 
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
