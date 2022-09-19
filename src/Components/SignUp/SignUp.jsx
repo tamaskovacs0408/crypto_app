@@ -1,32 +1,27 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.scss";
 
 export default function SignUp() {
-  const [name, setName] = useState("");
-  const [userName, setUsername] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("username", JSON.stringify(username))
+  }, [username]);
+  useEffect(() => {
+    localStorage.setItem("password", JSON.stringify(password))
+  }, [password]);
 
   return (
     <div className="form_container">
       <form>
-        <label htmlFor="fullname">
-          Full name:
-          <input
-            id="fullname"
-            type="text"
-            value={name}
-            placeholder="Full name"
-            aria-label="fullname"
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
         <label htmlFor="username">
           Username:
           <input
             id="username"
             type="text"
-            value={userName}
+            value={username}
             placeholder="Username"
             aria-label="username"
             onChange={(e) => setUsername(e.target.value)}
@@ -47,7 +42,7 @@ export default function SignUp() {
           />
         </label>
 
-        <input type="submit" />
+        <input type="submit" value="Submit"/>
       </form>
     </div>
   );
