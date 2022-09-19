@@ -1,38 +1,33 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./index.scss";
 
 export default function SignUp() {
-  const [username, setUsername] = useState(() => {
-    const saved = localStorage.getItem("username");
-    const initialValue = saved;
-    return initialValue || "";
-  });
-  const [password, setPassword] = useState(() => {
-    const saved = localStorage.getItem("password");
-    const initialValue = saved;
-    return initialValue || "";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("username", username);
-  }, [username]);
-  useEffect(() => {
-    localStorage.setItem("password", password);
-  }, [password]);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className="form_container">
       <form>
-        <label htmlFor="username">
+        <label htmlFor="e-mail">
+          <input
+            id="e-mail"
+            type="email"
+            placeholder="Email address"
+            aria-label="email"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        <label htmlFor="name">
           Username:
           <input
-            id="username"
+            id="name"
             type="text"
-            value={username}
-            placeholder="Username"
-            aria-label="username"
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Name"
+            aria-label="Name"
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </label>
@@ -41,7 +36,6 @@ export default function SignUp() {
           <input
             id="psw"
             type="password"
-            value={password}
             placeholder="Password"
             minLength={8}
             aria-label="password"
