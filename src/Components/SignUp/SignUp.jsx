@@ -9,11 +9,14 @@ export default function SignUp() {
 
   function handleFormSubmit(e) {
     e.preventDefault();
+
+    localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("password", JSON.stringify(password));
   }
 
   return (
     <div className="form_container">
-      <form >
+      <form onSubmit={handleFormSubmit}>
         <label htmlFor="e-mail">
           Email:
           <input
@@ -49,7 +52,7 @@ export default function SignUp() {
           />
         </label>
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Sign up"/> 
       </form>
     </div>
   );
