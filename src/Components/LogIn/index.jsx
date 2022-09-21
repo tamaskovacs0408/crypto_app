@@ -25,6 +25,7 @@ export default function LogIn() {
             required
           />
         </label>
+        <input type="submit" value="Login" />
       </from>
     </div>
   );
