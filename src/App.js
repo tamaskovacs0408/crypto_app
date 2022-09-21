@@ -1,7 +1,7 @@
 import './App.scss';
-import SignUp from './Components/SignUp/SignUp';
-import LogIn from './Components/LogIn/LogIn';
-import MainMenu from './Components/MainMenu/MainMenu';
+import SignUp from './Components/SignUp';
+import LogIn from './Components/LogIn';
+import MainMenu from './Components/MainMenu';
 
 function App() {
   return (
