@@ -15,7 +15,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="form_container">
+    <div className="signup_container">
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="e-mail">
           Email:
