@@ -13,6 +13,7 @@ export default function LogIn() {
         <from>
           <h2>Login</h2>
           <label htmlFor="login_email">
+            Email:
             <input
               type="email"
               placeholder="Email"
@@ -21,6 +22,7 @@ export default function LogIn() {
             />
           </label>
           <label htmlFor="login_password">
+            Password:
             <input
               type="password"
               placeholder="password"
