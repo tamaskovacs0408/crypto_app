@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import MainMenu from '../MainMenu';
 import "./index.scss";
 
 export default function LogIn() {
   const [loginemail, setLoginemail] = useState("");
   const [loginpassword, setLoginpassword] = useState("");
+  const [menu, setMenu] = useState(true);
 
   return (
     <div className="login_container">
