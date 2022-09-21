@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MainMenu from '../MainMenu';
+import MainMenu from "../MainMenu";
 import "./index.scss";
 
 export default function LogIn() {
@@ -9,26 +9,34 @@ export default function LogIn() {
 
   return (
     <div className="login_container">
-      <from>
-        <h2>Login</h2>
-        <label htmlFor="login_email">
-          <input
-            type="email"
-            placeholder="Email"
-            onChange={(e) => setLoginemail(e.target.value)}
-            required
-          />
-        </label>
-        <label htmlFor="login_password">
-          <input
-            type="password"
-            placeholder="password"
-            onChange={(e) => setLoginpassword(e.target.value)}
-            required
-          />
-        </label>
-        <input type="submit" value="Login" />
-      </from>
+      {menu ? (
+        <from>
+          <h2>Login</h2>
+          <label htmlFor="login_email">
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setLoginemail(e.target.value)}
+              required
+            />
+          </label>
+          <label htmlFor="login_password">
+            <input
+              type="password"
+              placeholder="password"
+              onChange={(e) => setLoginpassword(e.target.value)}
+              required
+            />
+          </label>
+          <input type="submit" value="Login" />
+        </from>
+      ) : (
+        <MainMenu />
+      )}
     </div>
   );
+}
+
+{
+  /*  */
 }
