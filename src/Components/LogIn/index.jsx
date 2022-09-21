@@ -7,14 +7,29 @@ export default function LogIn() {
   const [loginpassword, setLoginpassword] = useState("");
   const [menu, setMenu] = useState(true);
 
+  function handleLogin(e) {
+    e.perventDefault();
+
+    let email = localStorage.getItem("email");
+    let psw = localStorage.getItem("password");
+
+    if (email !== loginemail || psw !== loginpassword) {
+      console.log("Wrong email or password!")
+    } else {
+      console.log("Successful log in!")
+      setMenu(false)
+    }
+  }
+
   return (
     <div className="login_container">
       {menu ? (
-        <from>
+        <form onSubmit={handleLogin}>
           <h2>Login</h2>
           <label htmlFor="login_email">
             Email:
             <input
+              id="login_email"
               type="email"
               placeholder="Email"
               onChange={(e) => setLoginemail(e.target.value)}
@@ -24,6 +39,7 @@ export default function LogIn() {
           <label htmlFor="login_password">
             Password:
             <input
+              id="login_password"
               type="password"
               placeholder="password"
               onChange={(e) => setLoginpassword(e.target.value)}
@@ -31,7 +47,7 @@ export default function LogIn() {
             />
           </label>
           <input type="submit" value="Login" />
-        </from>
+        </form>
       ) : (
         <MainMenu />
       )}
