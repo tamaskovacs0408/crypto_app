@@ -5,6 +5,7 @@ import uuid from "react-uuid";
 import { COIN_API } from "../API";
 // import { COIN_DATA_API } from "../API";
 import Currency from "../Currency";
+import MenuNav from "../MenuNav";
 // import BTC from "../BTC/BTC";
 // import ETH from "../ETH/ETH";
 // import BNB from "../BNB/BNB";
@@ -18,9 +19,9 @@ export default function MainMenu() {
 
   useEffect(() => {
     axios
-        .get(`${COIN_API}`)
-        .then((res) => setCoinData(res.data))
-        .catch((err) => console.log(err));
+      .get(`${COIN_API}`)
+      .then((res) => setCoinData(res.data))
+      .catch((err) => console.log(err));
 
     // const interval = setInterval(() => {
     //   axios
@@ -33,47 +34,19 @@ export default function MainMenu() {
   }, []);
 
   return (
-    <div className="main_menu_container">
-      {coinData
-        .filter((coin) => coin.rank <= 30).sort((coin1, coin2) => coin1.rank - coin2.rank)
-        .map((data) => {
-          return <Currency key={uuid()} data={data} />;
-        })}
-      {/* {coinData
-        .filter((coin) => coin.id === "btc-bitcoin")
-        .map((data) => {
-          return <BTC key={uuid()} data={data} />;
-        })}
-      {coinData
-        .filter((coin) => coin.id === "eth-ethereum")
-        .map((data) => {
-          return <ETH key={uuid()} data={data} />;
-        })}
-      {coinData
-        .filter((coin) => coin.id === "bnb-binance-coin")
-        .map((data) => {
-          return <BNB key={uuid()} data={data} />;
-        })}
-      {coinData
-        .filter((coin) => coin.id === "ada-cardano")
-        .map((data) => {
-          return <ADA key={uuid()} data={data} />;
-        })}
-      {coinData
-        .filter((coin) => coin.id === "avax-avalanche")
-        .map((data) => {
-          return <AVAX key={uuid()} data={data} />;
-        })}
-      {coinData
-        .filter((coin) => coin.id === "doge-dogecoin")
-        .map((data) => {
-          return <Doge key={uuid()} data={data} />;
-        })}
-      {coinData
-        .filter((coin) => coin.id === "sol-solana")
-        .map((data) => {
-          return <SOL key={uuid()} data={data} />;
-        })} */}
+    <div>
+      <MenuNav />
+      <div className="main_menu_container">
+        {coinData
+          .filter((coin) => coin.rank <= 30)
+          .sort((coin1, coin2) => coin1.rank - coin2.rank)
+          .map((data) => {
+            return <Currency key={uuid()} data={data} />;
+          })}
+      </div>
     </div>
   );
+}
+{
+  /*  */
 }
