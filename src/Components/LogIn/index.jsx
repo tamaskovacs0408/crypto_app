@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import MainMenu from "../MainMenu";
 import "./index.scss";
 
@@ -49,7 +50,7 @@ export default function LogIn() {
           <input type="submit" value="Login" />
         </form>
       ) : (
-        <MainMenu />
+        <Link to="/menu">{<MainMenu/>}</Link>
       )}
     </div>
   );
