@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 //import { Link } from "react-router-dom";
 import MainMenu from "../MainMenu";
 import "./index.scss";
@@ -9,16 +10,19 @@ export default function LogIn() {
   const [menu, setMenu] = useState(true);
 
   function handleLogin(e) {
-    e.perventDefault();
+    e.preventDefault();
 
-    let email = localStorage.getItem("email");
-    let psw = localStorage.getItem("password");
+    let email = localStorage.getItem("email").replace(/"/g, "");
+    let psw = localStorage.getItem("password").replace(/"/g, "");
 
-    if (email !== loginemail || psw !== loginpassword) {
-      console.log("Wrong email or password!")
-    } else {
+    console.log(email)
+    console.log(psw)
+
+    if (email === loginemail && psw === loginpassword) {
       console.log("Successful log in!")
       setMenu(false)
+    } else if (email !== loginemail || psw !== loginpassword){
+      console.log("Wrong email or password!")
     }
   }
 
@@ -50,8 +54,9 @@ export default function LogIn() {
           <input type="submit" value="Login" />
         </form>
       ) : (
-        <MainMenu />
+        <Navigate to="/menu" />
       )}
+      If you have no account, first <Link to="/signup">Sign up</Link>
     </div>
   );
 }
