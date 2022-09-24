@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import Video from "../Assets/bg_video.mp4";
 import "./index.scss";
 
 export default function LogIn() {
@@ -55,6 +56,9 @@ export default function LogIn() {
         <Navigate to="/menu" />
       )}
       <Link to="/signup">Sign up now</Link>
+      <video autoPlay loop muted>
+        <source src={Video} type="video/mp4"/>
+      </video>
     </div>
   );
 }
