@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-//import { Link } from "react-router-dom";
-import MainMenu from "../MainMenu";
 import "./index.scss";
 
 export default function LogIn() {
@@ -56,7 +54,7 @@ export default function LogIn() {
       ) : (
         <Navigate to="/menu" />
       )}
-      If you have no account, first <Link to="/signup">Sign up</Link>
+      <Link to="/signup">Sign up now</Link>
     </div>
   );
 }
