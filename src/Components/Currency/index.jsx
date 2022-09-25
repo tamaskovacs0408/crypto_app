@@ -12,7 +12,7 @@ import {
 export default function Currency({ id,  data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
   let athDate = data.quotes.USD.ath_date.split("T")[0];
-  const [favourites, setFavourites] = useState("");
+  const [favourites, setFavourites] = useState([]);
 
   return (
     <div className="accordion_container">
