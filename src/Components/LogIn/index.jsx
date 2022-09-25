@@ -56,9 +56,9 @@ export default function LogIn() {
         <Navigate to="/menu" />
       )}
       <Link to="/signup">Sign up now</Link>
-      <video autoPlay loop muted>
+      {/* <video autoPlay loop muted>
         <source src={Video} type="video/mp4"/>
-      </video>
+      </video> */}
     </div>
   );
 }
