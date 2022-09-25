@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import "./index.scss";
 import {
   Accordion,
@@ -24,6 +25,8 @@ export default function Currency({ id,  data }) {
                   <span>{data.rank}</span>
                   <h2>{data.name}</h2>
                   <p>{data.symbol}</p>
+                  <IoHeart className="fav_icon"/>
+                  <IoHeartOutline className="fav_icon"/>
                 </div>
                 <div className="crypto_price">
                   <p>{parseFloat(data.quotes.USD.price).toFixed(2)} $</p>
