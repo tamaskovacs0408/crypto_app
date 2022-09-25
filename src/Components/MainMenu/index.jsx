@@ -34,7 +34,7 @@ export default function MainMenu() {
           .filter((coin) => coin.rank <= 30)
           .sort((coin1, coin2) => coin1.rank - coin2.rank)
           .map((data) => {
-            return <Currency key={uuid()} data={data} />;
+            return <Currency key={uuid()} id={uuid()} data={data} />;
           })}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./index.scss";
 import {
   Accordion,
@@ -8,9 +8,10 @@ import {
   AccordionItemButton,
 } from "react-accessible-accordion";
 
-export default function Currency({ data }) {
+export default function Currency({ id,  data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
-  let athDate = data.quotes.USD.ath_date.split('T')[0];
+  let athDate = data.quotes.USD.ath_date.split("T")[0];
+  const [favourites, setFavourites] = useState([])
 
   return (
     <div className="accordion_container">
