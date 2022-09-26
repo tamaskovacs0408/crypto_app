@@ -12,13 +12,24 @@ import {
 export default function Currency({ id, data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
   let athDate = data.quotes.USD.ath_date.split("T")[0];
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(() => {
+    let fav = localStorage.getItem("active");
+    if (fav) {
+      return (fav = JSON.parse(localStorage.getItem("fav")));
+    } else {
+      return [];
+    }
+  });
 
   const handleChangeActive = () => {
     setActive((previousHeart) => {
       return !previousHeart;
     });
   };
+
+  useEffect(() => {
+    localStorage.setItem("active", JSON.stringify(active))
+  }, [active])
 
   return (
     <div className="accordion_container">
