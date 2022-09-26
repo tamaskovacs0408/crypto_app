@@ -21,7 +21,7 @@ export default function MainMenu() {
     //     .get(`${COIN_API}`)
     //     .then((res) => setCoinData(res.data))
     //     .catch((err) => console.log(err));
-    // }, 100000);
+    // }, 60000);
 
     // return () => clearInterval(interval);
   }, []);
