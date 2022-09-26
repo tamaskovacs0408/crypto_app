@@ -14,16 +14,33 @@ export default function Currency({ id, data }) {
   let athDate = data.quotes.USD.ath_date.split("T")[0];
   const [active, setActive] = useState(false);
 
+  const handleChangeActive = () => {
+    setActive((previousHeart) => {
+      return !previousHeart;
+    });
+  };
+
   return (
     <div className="accordion_container">
+      <div className="fav_container">
+        {active ? (
+          <IoHeart
+            className="active"
+            onClick={() => handleChangeActive()}
+          />
+        ) : (
+          <IoHeartOutline
+            className="inactive"
+            onClick={() => handleChangeActive()}
+          />
+        )}
+      </div>
       <Accordion allowZeroExpanded>
         <AccordionItem>
           <AccordionItemHeading>
             <AccordionItemButton>
               <div className="crypto_container">
                 <div className="crypto_name">
-                  <IoHeart className="fav_icon active" />
-                  <IoHeartOutline className="fav_icon inactive" />
                   <p>{data.rank}</p>
                   <h2>{data.name}</h2>
                   <p>{data.symbol}</p>
