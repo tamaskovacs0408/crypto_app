@@ -9,10 +9,10 @@ import {
   AccordionItemButton,
 } from "react-accessible-accordion";
 
-export default function Currency({ id,  data }) {
+export default function Currency({ id, data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
   let athDate = data.quotes.USD.ath_date.split("T")[0];
-  const [favourites, setFavourites] = useState([]);
+  const [favourite, setFavourite] = useState(false);
 
   return (
     <div className="accordion_container">
@@ -22,11 +22,10 @@ export default function Currency({ id,  data }) {
             <AccordionItemButton>
               <div className="crypto_container">
                 <div className="crypto_name">
+                <IoHeart className="fav_icon" />
                   <span>{data.rank}</span>
                   <h2>{data.name}</h2>
                   <p>{data.symbol}</p>
-                  <IoHeart className="fav_icon"/>
-                  <IoHeartOutline className="fav_icon"/>
                 </div>
                 <div className="crypto_price">
                   <p>{parseFloat(data.quotes.USD.price).toFixed(2)} $</p>

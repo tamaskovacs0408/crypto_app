@@ -15,14 +15,13 @@
     .crypto_name {
       margin-left: 5px;
       display: flex;
+      justify-content: center;
+      align-items: center;
 
       .fav_icon {
         z-index: 3;
-        width: 50px;
+        font-size: 2rem;
         color: red;
-      }
-      .fav_icon:hover {
-        color: rgb(122, 5, 5);
       }
     }
     .crypto_price {
