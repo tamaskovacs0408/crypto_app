@@ -12,7 +12,7 @@ import {
 export default function Currency({ id, data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
   let athDate = data.quotes.USD.ath_date.split("T")[0];
-  const [favourite, setFavourite] = useState(false);
+  const [active, setActive] = useState(false);
 
   return (
     <div className="accordion_container">
@@ -22,8 +22,9 @@ export default function Currency({ id, data }) {
             <AccordionItemButton>
               <div className="crypto_container">
                 <div className="crypto_name">
-                <IoHeart className="fav_icon" />
-                  <span>{data.rank}</span>
+                  <IoHeart className="fav_icon active" />
+                  <IoHeartOutline className="fav_icon inactive" />
+                  <p>{data.rank}</p>
                   <h2>{data.name}</h2>
                   <p>{data.symbol}</p>
                 </div>

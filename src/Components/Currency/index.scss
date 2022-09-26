@@ -15,7 +15,7 @@
     .crypto_name {
       margin-left: 5px;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
 
       .fav_icon {
@@ -23,6 +23,9 @@
         font-size: 2rem;
         color: red;
       }
+      .active {
+        display: none;
+      }      
     }
     .crypto_price {
       width: 20%;
