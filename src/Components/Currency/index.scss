@@ -1,20 +1,5 @@
 .accordion_container {
   width: 100%;
-  .fav_container {
-
-    .active {
-      cursor: pointer;
-      z-index: 3;
-      font-size: 2rem;
-      color: red;
-    }
-    .inactive {
-      cursor: pointer;
-      z-index: 3;
-      font-size: 2rem;
-      color: red;
-    } 
-  }
 
   .crypto_container {
     cursor: pointer;
@@ -30,8 +15,14 @@
     .crypto_name {
       margin-left: 5px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+
+      .fav_icon {
+        z-index: 3;
+        font-size: 2rem;
+        color: red;
+      }
 
     }
     .crypto_price {
