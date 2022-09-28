@@ -56,9 +56,15 @@ export default function LogIn() {
           <input className="login_btn" type="submit" value="Login" />
         </form>
       ) : (
-        <Navigate to="/menu" />
+        <Navigate to="/menu" />        
       )}
-      <span className="signup_text">Need account? <Link className="signup_link" to="/signup">Sign up now</Link>!</span>
+      <span className="signup_text">
+        Need account?{" "}
+        <Link className="signup_link" to="/signup">
+          Sign up now
+        </Link>
+        !
+      </span>
     </div>
   );
 }
