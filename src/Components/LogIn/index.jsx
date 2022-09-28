@@ -31,7 +31,7 @@ export default function LogIn() {
         <form onSubmit={handleLogin}>
           <h2>Login</h2>
           <label htmlFor="login_email">
-            <h3>Email:</h3>
+            {/* <h3>Email:</h3> */}
             <input
               id="login_email"
               type="email"
@@ -41,7 +41,7 @@ export default function LogIn() {
             />
           </label>
           <label htmlFor="login_password">
-            <h3>Password:</h3>
+            {/* <h3>Password:</h3> */}
             <input
               id="login_password"
               type="password"
@@ -50,7 +50,7 @@ export default function LogIn() {
               required
             />
           </label>
-          <input type="submit" value="Login" />
+          <input className="login_btn" type="submit" value="Login" />
         </form>
       ) : (
         <Navigate to="/menu" />

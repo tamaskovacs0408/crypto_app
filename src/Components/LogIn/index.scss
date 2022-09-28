@@ -14,19 +14,29 @@
   h2 {
     text-align: center;
     font-size: 3rem;
+    margin: 10px;
   }
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
 
-    h3 {
-      margin: 5px 0 10px 0;
-      font-size: 2.2rem;
-    }
+    // h3 {
+    //   margin: 5px 0 10px 0;
+    //   font-size: 2.2rem;
+    // }
 
     input {
       border: none;
       font-size: 1.8rem;
+      padding: 2px;
+      margin: 15px;
+    }
+    input:focus {
+      outline-color: rgba(0, 0, 0, 0.619);
     }
   }
 }
