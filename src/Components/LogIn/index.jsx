@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
 export default function LogIn() {
   const [loginemail, setLoginemail] = useState("");
@@ -13,23 +15,24 @@ export default function LogIn() {
     let email = localStorage.getItem("email").replace(/"/g, "");
     let psw = localStorage.getItem("password").replace(/"/g, "");
 
-    console.log(email)
-    console.log(psw)
+    console.log(email);
+    console.log(psw);
 
     if (email === loginemail && psw === loginpassword) {
-      console.log("Successful log in!")
-      setMenu(false)
-    } else if (email !== loginemail || psw !== loginpassword){
-      console.log("Wrong email or password!")
+      console.log("Successful log in!");
+      setMenu(false);
+    } else if (email !== loginemail || psw !== loginpassword) {
+      console.log("Wrong email or password!");
     }
   }
 
   return (
     <div className="login_container">
+      <h2>Login</h2>
       {menu ? (
         <form onSubmit={handleLogin}>
-          <h2>Login</h2>
-          <label htmlFor="login_email">
+          <div className="login_input_container">
+            <FontAwesomeIcon className="login_icon" icon={faUser} />
 
             <input
               id="login_email"
@@ -38,9 +41,10 @@ export default function LogIn() {
               onChange={(e) => setLoginemail(e.target.value)}
               required
             />
-          </label>
-          <label htmlFor="login_password">
-    
+          </div>
+
+          <div className="login_input_container">
+            <FontAwesomeIcon className="login_icon" icon={faLock} />
             <input
               id="login_password"
               type="password"
@@ -48,7 +52,7 @@ export default function LogIn() {
               onChange={(e) => setLoginpassword(e.target.value)}
               required
             />
-          </label>
+          </div>
           <input className="login_btn" type="submit" value="Login" />
         </form>
       ) : (
@@ -58,5 +62,3 @@ export default function LogIn() {
     </div>
   );
 }
-
-

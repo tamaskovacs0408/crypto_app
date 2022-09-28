@@ -25,16 +25,30 @@
     margin-top: 20px;
     padding: 10px;
 
-    input {
-      border: none;
-      font-size: 1.8rem;
-      padding: 2px 4px 2px 4px;
+    .login_input_container {
+      display: flex;
+      justify-content: flex-start;
+      background-color: white;
+      padding: 5px;
+      height: 40px;
       margin: 15px;
-      height: 35px;
       border-radius: 5px;
-    }
-    input:focus {
-      outline-color: rgba(0, 0, 0, 0.619);
+
+      .login_icon {
+        display: block;
+        height: 20px;
+        align-self: center;
+      }
+      input {
+        border: none;
+        font-size: 1.8rem;
+        margin-left: 5px;
+        padding: 2px 4px 2px 4px;
+        height: 100%;
+      }
+      input:focus {
+        outline: none;
+      }
     }
   }
 }
