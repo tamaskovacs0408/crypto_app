@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import Video from "../Assets/bg_video.mp4";
 import "./index.scss";
 
 export default function LogIn() {
@@ -31,7 +30,7 @@ export default function LogIn() {
         <form onSubmit={handleLogin}>
           <h2>Login</h2>
           <label htmlFor="login_email">
-            {/* <h3>Email:</h3> */}
+
             <input
               id="login_email"
               type="email"
@@ -41,7 +40,7 @@ export default function LogIn() {
             />
           </label>
           <label htmlFor="login_password">
-            {/* <h3>Password:</h3> */}
+    
             <input
               id="login_password"
               type="password"
@@ -56,9 +55,6 @@ export default function LogIn() {
         <Navigate to="/menu" />
       )}
       <Link to="/signup">Sign up now</Link>
-      {/* <video autoPlay loop muted>
-        <source src={Video} type="video/mp4"/>
-      </video> */}
     </div>
   );
 }
