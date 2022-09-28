@@ -58,7 +58,7 @@ export default function LogIn() {
       ) : (
         <Navigate to="/menu" />
       )}
-      <Link to="/signup">Sign up now</Link>
+      <span className="signup_text">Need account? <Link className="signup_link" to="/signup">Sign up now</Link>!</span>
     </div>
   );
 }

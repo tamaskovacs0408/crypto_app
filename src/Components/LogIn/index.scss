@@ -7,9 +7,10 @@
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   background-color: antiquewhite;
+  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
 
   h2 {
     text-align: center;
@@ -22,8 +23,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    padding: 10px;
 
     .login_input_container {
       display: flex;
@@ -49,6 +48,26 @@
       input:focus {
         outline: none;
       }
+    }
+
+    .login_btn {
+      border: none;
+      padding: 5px;
+      width: 200px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 10px;
+    }
+  }
+
+  .signup_text {
+    display: inline-block;
+    font-size: 1.8rem;
+
+    .signup_link {
+      text-decoration: none;
+      color: rgb(66, 215, 20);
     }
   }
 }
