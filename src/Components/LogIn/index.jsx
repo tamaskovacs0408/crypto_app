@@ -31,7 +31,7 @@ export default function LogIn() {
         <form onSubmit={handleLogin}>
           <h2>Login</h2>
           <label htmlFor="login_email">
-            Email:
+            <h3>Email:</h3>
             <input
               id="login_email"
               type="email"
@@ -41,7 +41,7 @@ export default function LogIn() {
             />
           </label>
           <label htmlFor="login_password">
-            Password:
+            <h3>Password:</h3>
             <input
               id="login_password"
               type="password"

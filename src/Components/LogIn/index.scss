@@ -1,14 +1,43 @@
+.login_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: antiquewhite;
 
+  h2 {
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
 
+    h3 {
+      margin: 5px 0 10px 0;
+    }
 
-
-
-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  opacity: 0.6;
-  filter: grayscale(50%);
+    input {
+      border: none;
+      font-size: 1.5rem;
+    }
+  }
 }
+
+
+
+
+// video {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   width: 100%;
+//   opacity: 0.6;
+//   filter: grayscale(50%);
+// }
