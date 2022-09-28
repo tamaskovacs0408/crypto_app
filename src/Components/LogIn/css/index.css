@@ -23,6 +23,7 @@
 }
 .login_container h2 {
   text-align: center;
+  font-size: 3rem;
 }
 .login_container form {
   display: -webkit-box;
@@ -35,8 +36,9 @@
 }
 .login_container form h3 {
   margin: 5px 0 10px 0;
+  font-size: 2.2rem;
 }
 .login_container form input {
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
