@@ -58,7 +58,7 @@ export default function Currency({ id, data }) {
                   <p>{athPrice}$</p>
                 </div>
                 <div className="datas">
-                  <h3>All Time High Price Date </h3>
+                  <h3>ATH Price Date </h3>
                   <p>{athDate}</p>
                 </div>
               </div>

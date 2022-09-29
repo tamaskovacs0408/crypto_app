@@ -11,6 +11,7 @@
     margin: 20px auto;
     border-radius: 4px;
     background-color: #E8EEF2;
+    transition: all 0.2s ease-in;
 
     .crypto_name {
       margin-left: 5px;
@@ -24,7 +25,7 @@
         margin-left: 10px;
       }
       p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-left: 10px;
       }
     }
@@ -39,6 +40,14 @@
         font-weight: 500;
       }
     }
+  }
+  .crypto_container:hover {
+    background-color: #FEC601;
+    color: #151515;
+  }
+  .crypto_containe:active {
+    background-color: #FEC601;
+    color: #151515;
   }
 
   .data_container {
@@ -63,6 +72,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        h3 {
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 1.5rem;
+        }
       }
     }
   }
