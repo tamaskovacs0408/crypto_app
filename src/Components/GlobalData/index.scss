@@ -1,3 +1,10 @@
+h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 15px auto;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+};
 .globaldata_container {
   // position: absolute;
   // left: 50%;
@@ -9,7 +16,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   justify-items: center;
-  align-items: center;
+  align-items: baseline;
   margin: 20px auto;
 
   .gdatas {

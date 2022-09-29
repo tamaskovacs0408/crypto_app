@@ -6,6 +6,8 @@ export default function Global({marketCap, btcDom, crypNum}) {
   let num = crypNum?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") || crypNum;
 
   return (
+    <>
+    <h2>Global data</h2>
     <div className="globaldata_container">
       <div className="gdatas">
         <h3>Market Cap</h3>
@@ -20,5 +22,6 @@ export default function Global({marketCap, btcDom, crypNum}) {
         <p>{num} pc.</p>
       </div>
     </div>
+    </>
   );
 }
