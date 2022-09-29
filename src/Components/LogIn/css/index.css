@@ -75,13 +75,20 @@
 }
 .login_container form .login_btn {
   border: none;
+  border-radius: 4px;
   padding: 5px;
   width: 200px;
   background-color: #FEC601;
   font-size: 2rem;
+  font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
   margin: 10px;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+.login_container form .login_btn:hover {
+  background-color: #f9d44b;
 }
 .login_container .signup_text {
   display: inline-block;
