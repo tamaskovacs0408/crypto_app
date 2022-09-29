@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { GLOBAL_DATA_API } from "../API";
 import Global from "./Global";
 import MenuNav from "../MenuNav";
@@ -8,9 +7,9 @@ export default function GlobalData() {
   const [gData, setgData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(GLOBAL_DATA_API)
-      .then((res) => setgData(res.data))
+    fetch(GLOBAL_DATA_API)
+      .then(res => res.json())
+      .then(data => setgData(data))
       .catch((err) => console.log(err));
   }, []);
 
