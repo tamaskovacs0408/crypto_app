@@ -13,6 +13,10 @@ export default function Currency({ id, data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
   let athDate = data.quotes.USD.ath_date.split("T")[0];
   athDate = athDate.replace(/-/g, '.');
+  let marcetCap = data.quotes.USD.market_cap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  let supply = data.circulating_supply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  let currentPrice = parseFloat(data.quotes.USD.price).toFixed(2);
+  currentPrice = currentPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 
 
   return (
@@ -23,12 +27,11 @@ export default function Currency({ id, data }) {
             <AccordionItemButton>
               <div className="crypto_container">
                 <div className="crypto_name">
-                  <p>{data.rank}</p>
                   <h2>{data.name}</h2>
                   <p>{data.symbol}</p>
                 </div>
                 <div className="crypto_price">
-                  <p>{parseFloat(data.quotes.USD.price).toFixed(2)} $</p>
+                  <p>{currentPrice}$</p>
                   <p style={{ color: priceChange < 0 ? "red" : "#169c11" }}>
                     {parseFloat(priceChange).toFixed(1)} %
                   </p>
@@ -41,11 +44,11 @@ export default function Currency({ id, data }) {
               <div className="data_inner_container">
                 <div className="datas">
                   <h3>Market cap:</h3>
-                  <p>{data.quotes.USD.market_cap}</p>
+                  <p>{marcetCap}$</p>
                 </div>
                 <div className="datas">
                   <h3>Circulating supply:</h3>
-                  <p>{data.circulating_supply}</p>
+                  <p>{supply}$</p>
                 </div>
                 <div className="datas">
                   {" "}
