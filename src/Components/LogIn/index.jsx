@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function LogIn() {
   const [loginemail, setLoginemail] = useState("");
@@ -32,7 +32,7 @@ export default function LogIn() {
       {menu ? (
         <form onSubmit={handleLogin}>
           <div className="login_input_container">
-            <FontAwesomeIcon className="login_icon" icon={faUser} />
+            <FontAwesomeIcon className="login_icon" icon={faEnvelope} />
 
             <input
               id="login_email"

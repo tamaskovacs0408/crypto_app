@@ -16,13 +16,48 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
-    margin: 10px;
   }
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .signup_input_container {
+      display: flex;
+      justify-content: flex-start;
+      background-color: white;
+      padding: 5px;
+      height: 40px;
+      margin: 15px;
+      border-radius: 5px;
+
+      .signup_icon {
+        display: block;
+        height: 20px;
+        align-self: center;
+      }
+      input {
+        border: none;
+        font-size: 1.8rem;
+        margin-left: 5px;
+        padding: 2px 4px 2px 4px;
+        height: 100%;
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+
+    .signup_btn {
+      border: none;
+      padding: 5px;
+      width: 200px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 10px;
+    }
   }
 
 }

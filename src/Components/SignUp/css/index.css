@@ -1,0 +1,83 @@
+.signup_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: antiquewhite;
+  -webkit-box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+}
+.signup_container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.signup_container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signup_container form .signup_input_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: white;
+  padding: 5px;
+  height: 40px;
+  margin: 15px;
+  border-radius: 5px;
+}
+.signup_container form .signup_input_container .signup_icon {
+  display: block;
+  height: 20px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.signup_container form .signup_input_container input {
+  border: none;
+  font-size: 1.8rem;
+  margin-left: 5px;
+  padding: 2px 4px 2px 4px;
+  height: 100%;
+}
+.signup_container form .signup_input_container input:focus {
+  outline: none;
+}
+.signup_container form .signup_btn {
+  border: none;
+  padding: 5px;
+  width: 200px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 10px;
+}
