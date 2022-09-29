@@ -59,10 +59,6 @@
   background-color: #FEC601;
   color: #151515;
 }
-.accordion_container .crypto_containe:active {
-  background-color: #FEC601;
-  color: #151515;
-}
 .accordion_container .data_container {
   display: -webkit-box;
   display: -ms-flexbox;
