@@ -45,20 +45,20 @@ export default function Currency({ id, data }) {
             <div className="data_container">
               <div className="data_inner_container">
                 <div className="datas">
-                  <h3>Market Cap:</h3>
+                  <h3>Market Cap</h3>
                   <p>{marketCap}$</p>
                 </div>
                 <div className="datas">
-                  <h3>Circulating Supply:</h3>
+                  <h3>Circulating Supply</h3>
                   <p>{supply}$</p>
                 </div>
                 <div className="datas">
                   {" "}
-                  <h3>All Time High Price: </h3>
+                  <h3>All Time High Price </h3>
                   <p>{athPrice}$</p>
                 </div>
                 <div className="datas">
-                  <h3>All Time High Price Date: </h3>
+                  <h3>All Time High Price Date </h3>
                   <p>{athDate}</p>
                 </div>
               </div>
