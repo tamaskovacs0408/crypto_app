@@ -9,8 +9,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: antiquewhite;
-  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+  background-color: #E8EEF2;
+  box-shadow: 10px -2px 20px 2px #e8eef24c;
 
   h2 {
     text-align: center;
@@ -54,6 +54,7 @@
       border: none;
       padding: 5px;
       width: 200px;
+      background-color: #FEC601;
       font-size: 2rem;
       text-transform: uppercase;
       cursor: pointer;
@@ -67,7 +68,11 @@
 
     .signup_link {
       text-decoration: none;
-      color: rgb(66, 215, 20);
+      color: #0a1f39;
+      transition: color 0.2s ease-in;
+    }
+    .signup_link:hover {
+      color: #6C809A;
     }
   }
 }
