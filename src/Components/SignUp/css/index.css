@@ -55,6 +55,8 @@
   height: 40px;
   margin: 15px;
   border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px rgba(10, 31, 57, 0.4078431373);
+          box-shadow: 1px 1px 2px rgba(10, 31, 57, 0.4078431373);
 }
 .signup_container form .signup_input_container .signup_icon {
   display: block;

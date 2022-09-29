@@ -52,7 +52,7 @@ export default function SignUp() {
               id="psw"
               type="password"
               placeholder="Password"
-              minLength={8}
+              minLength={6}
               aria-label="password"
               onChange={(e) => setPassword(e.target.value)}
               required
