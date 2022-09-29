@@ -4,13 +4,23 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: black;
+  color: #E8EEF2;
 
   .nav_link {
     text-decoration: none;
-    color: black;
-    margin: 10px;
-    font-size: 1.5rem;
+    color: #E8EEF2;
+    margin: 15px;
+    font-size: 2rem;
+    font-weight: 500;
     text-transform: uppercase;
+    transition: text-shadow 0.2s ease-in;
+  }
+  .nav_link:hover {
+    text-shadow: 1px 0px 1px white;
+  }
+  .nav_link:visited {
+    color: #E8EEF2;
   }
 }
 .navbar:last-child {
