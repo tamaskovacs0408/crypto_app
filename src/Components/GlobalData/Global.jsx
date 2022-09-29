@@ -7,7 +7,7 @@ export default function Global({marketCap, btcDom, crypNum}) {
 
   return (
     <>
-    <h2>Global data</h2>
+    <h2 className="global_title">Global data</h2>
     <div className="globaldata_container">
       <div className="gdatas">
         <h3>Market Cap</h3>
