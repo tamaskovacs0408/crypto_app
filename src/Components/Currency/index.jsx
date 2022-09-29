@@ -34,8 +34,8 @@ export default function Currency({ id, data }) {
                 </div>
                 <div className="crypto_price">
                   <p>{currentPrice}$</p>
-                  <p style={{ color: priceChange < 0 ? "red" : "#169c11" }}>
-                    {parseFloat(priceChange).toFixed(1)} %
+                  <p style={{ color: priceChange < 0 ? "#FF312E" : "#157145" }}>
+                    {parseFloat(priceChange).toFixed(1)}%
                   </p>
                 </div>
               </div>

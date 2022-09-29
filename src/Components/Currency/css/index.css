@@ -48,6 +48,9 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.accordion_container .crypto_container .crypto_price p {
+  font-size: 2rem;
+}
 .accordion_container .data_container {
   display: -webkit-box;
   display: -ms-flexbox;
