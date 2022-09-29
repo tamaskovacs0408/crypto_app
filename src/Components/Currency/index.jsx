@@ -16,7 +16,9 @@ export default function Currency({ id, data }) {
   let marcetCap = data.quotes.USD.market_cap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   let supply = data.circulating_supply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   let currentPrice = parseFloat(data.quotes.USD.price).toFixed(2);
-  currentPrice = currentPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+  currentPrice = currentPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  let athPrice = parseFloat(data.quotes.USD.ath_price).toFixed(2);
+  athPrice = athPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
 
   return (
@@ -43,20 +45,20 @@ export default function Currency({ id, data }) {
             <div className="data_container">
               <div className="data_inner_container">
                 <div className="datas">
-                  <h3>Market cap:</h3>
+                  <h3>Market Cap:</h3>
                   <p>{marcetCap}$</p>
                 </div>
                 <div className="datas">
-                  <h3>Circulating supply:</h3>
+                  <h3>Circulating Supply:</h3>
                   <p>{supply}$</p>
                 </div>
                 <div className="datas">
                   {" "}
-                  <h3>All Time High price: </h3>
-                  <p>{parseFloat(data.quotes.USD.ath_price).toFixed(2)}$</p>
+                  <h3>All Time High Price: </h3>
+                  <p>{athPrice}$</p>
                 </div>
                 <div className="datas">
-                  <h3>All Time High price date: </h3>
+                  <h3>All Time High Price Date: </h3>
                   <p>{athDate}</p>
                 </div>
               </div>
