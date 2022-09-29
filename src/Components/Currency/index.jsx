@@ -13,7 +13,7 @@ export default function Currency({ id, data }) {
   let priceChange = data.quotes.USD.percent_change_24h;
   let athDate = data.quotes.USD.ath_date.split("T")[0];
   athDate = athDate.replace(/-/g, '.');
-  let marcetCap = data.quotes.USD.market_cap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  let marketCap = data.quotes.USD.market_cap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   let supply = data.circulating_supply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   let currentPrice = parseFloat(data.quotes.USD.price).toFixed(2);
   currentPrice = currentPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -46,7 +46,7 @@ export default function Currency({ id, data }) {
               <div className="data_inner_container">
                 <div className="datas">
                   <h3>Market Cap:</h3>
-                  <p>{marcetCap}$</p>
+                  <p>{marketCap}$</p>
                 </div>
                 <div className="datas">
                   <h3>Circulating Supply:</h3>
