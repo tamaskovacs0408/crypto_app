@@ -7,30 +7,20 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function handleFormSubmit(e) {
     e.preventDefault();
 
     localStorage.setItem("email", JSON.stringify(email));
     localStorage.setItem("password", JSON.stringify(password));
-    navigate('/');
+    navigate("/");
   }
 
   return (
     <div className="signup_container">
+      <h2>Sign up</h2>
       <form onSubmit={handleFormSubmit}>
-        <label htmlFor="e-mail">
-          Email:
-          <input
-            id="e-mail"
-            type="email"
-            placeholder="Email address"
-            aria-label="email"
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
         <label htmlFor="name">
           Username:
           <input
@@ -39,6 +29,17 @@ export default function SignUp() {
             placeholder="Name"
             aria-label="Name"
             onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
+        <label htmlFor="e-mail">
+          Email:
+          <input
+            id="e-mail"
+            type="email"
+            placeholder="Email address"
+            aria-label="email"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
@@ -55,7 +56,7 @@ export default function SignUp() {
           />
         </label>
 
-        <input type="submit" value="Sign up"/> 
+        <input type="submit" value="Sign up" />
       </form>
     </div>
   );
