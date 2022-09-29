@@ -13,7 +13,7 @@ export default function Global({marketCap, btcDom, crypNum}) {
       </div>
       <div className="gdatas">
         <h3>Bitcoin Dominance</h3>
-        {btcDom}%
+        <p>{btcDom}%</p>
       </div>
       <div className="gdatas">
         <h3>Active Cryptocurrencies</h3>

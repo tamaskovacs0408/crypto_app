@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import "./index.scss";
 import {
