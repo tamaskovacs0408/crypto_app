@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -16,11 +17,23 @@ export default function SignUp() {
 
     localStorage.setItem("email", JSON.stringify(email));
     localStorage.setItem("password", JSON.stringify(password));
-    navigate("/");
+    toast.success("Successful sign up!", {
+      duration: 1000,
+      style: {
+        fontSize: "2rem",
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   }
 
   return (
     <>
+      <Toaster />
       <h1 className="main_title">HODLER CHECKER</h1>
       <div className="signup_container">
         <h2>Sign up</h2>
