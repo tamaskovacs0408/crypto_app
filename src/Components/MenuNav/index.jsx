@@ -9,7 +9,7 @@ export default function MenuNav() {
 
   return (
     <div className="navbar">
-      <h2 className="logo">Crypt app</h2>
+      <h2 className="logo">Hodler checker</h2>
       <nav className={showNavbar ? "navbar-visible" : ""}>
         <Link
           className="nav_link"
