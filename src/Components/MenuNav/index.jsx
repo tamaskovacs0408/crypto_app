@@ -10,18 +10,30 @@ export default function MenuNav() {
   return (
     <div className="navbar">
       <h2 className="logo">Crypt app</h2>
-      <nav>
-        <Link className="nav_link" to="/menu">
+      <nav className={showNavbar ? "navbar-visible" : ""}>
+        <Link
+          className="nav_link"
+          to="/menu"
+          onClick={() => setshowNavbar(false)}
+        >
           Currencies
         </Link>
-        <Link className="nav_link" to="/global">
+        <Link
+          className="nav_link"
+          to="/global"
+          onClick={() => setshowNavbar(false)}
+        >
           Global Data
         </Link>
-        <Link className="nav_link" to="/">
+        <Link className="nav_link" to="/" onClick={() => setshowNavbar(false)}>
           Log out
         </Link>
       </nav>
-      <FontAwesomeIcon className="hamburger_icon" icon={faBars}/>
+      <FontAwesomeIcon
+        className="hamburger_icon"
+        onClick={() => setshowNavbar(true)}
+        icon={faBars}
+      />
     </div>
   );
 }
