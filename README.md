@@ -1,4 +1,4 @@
- <h1>Holder Checker<h1>
+ **Hodler Checker**
 
 About
 
