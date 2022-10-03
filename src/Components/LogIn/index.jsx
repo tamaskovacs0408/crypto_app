@@ -22,6 +22,12 @@ export default function LogIn() {
     if (email === loginemail && psw === loginpassword) {
       toast.success("Successful log in!", {
         duration: 1000,
+        style: {
+          fontSize: '2rem',
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
       });
       setTimeout(() => {
         setMenu(false);
@@ -29,6 +35,12 @@ export default function LogIn() {
     } else if (email !== loginemail || psw !== loginpassword) {
       toast.error("Wrong email or password!", {
         duration: 1500,
+        style: {
+          fontSize: '2rem',
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
       });
     }
   }
