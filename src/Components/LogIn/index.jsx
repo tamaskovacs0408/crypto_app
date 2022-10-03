@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { ToastContainer, toast } from "react-toastify";
+import toast, {Toaster} from 'react-hot-toast';
 
 export default function LogIn() {
   const [loginemail, setLoginemail] = useState("");
@@ -21,32 +21,21 @@ export default function LogIn() {
 
     if (email === loginemail && psw === loginpassword) {
       toast.success("Successful log in!", {
-        position: "top-center",
-        autoClose: 500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        progress: undefined,
+        duration: 1000,
       });
       setTimeout(() => {
         setMenu(false);
       }, 1000);
     } else if (email !== loginemail || psw !== loginpassword) {
       toast.error("Wrong email or password!", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
+        duration: 1500,
       });
     }
   }
 
   return (
     <>
+    <Toaster/>
       <h1 className="main_title">HODLER CHECKER</h1>
       <div className="login_container">
         <h2>Login</h2>
