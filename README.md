@@ -8,3 +8,9 @@ To navigate between pages I used React Router 6.
 **Sources**
 <a href="https://www.npmjs.com/package/@fortawesome/react-fontawesome">Fontawesome Icons</a>
 
+**Screenshots**
+
+<img src="src/Components/Assets/Screenshots/login.jpg" alt="App screenshot">
+<img src="src/Components/Assets/Screenshots/signup.jpg" alt="App screenshot">
+<img src="src/Components/Assets/Screenshots/main.jpg" alt="App screenshot">
+<img src="src/Components/Assets/Screenshots/Global.jpg" alt="App screenshot">
