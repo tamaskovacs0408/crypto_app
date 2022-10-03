@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LogIn from "./Components/LogIn";
 import SignUp from "./Components/SignUp";
 import MainMenu from "./Components/MainMenu";
-import GlobalData from "./Components/GlobalData"
+import GlobalData from "./Components/GlobalData";
 
 function App() {
   return (
