@@ -9,7 +9,7 @@
   .logo {
     display: block;
     color: #E8EEF2;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     margin-left: 20px;
   }
@@ -51,7 +51,7 @@
   .hamburger_icon {
     display: block;
     color: #E8EEF2;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-right: 20px;
     cursor: pointer;
     transition: color 0.2s ease-in;
@@ -59,6 +59,17 @@
   .hamburger_icon:hover {
     color: #FEC601;
   }
+  }
+
+  @media screen and (min-width: 768px){
+    .navbar {
+      .logo {
+        font-size: 3rem;
+      }
+      .hamburger_icon {
+        font-size: 3rem;
+      }
+    }
   }
   
   @media screen and (min-width: 992px){
