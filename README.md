@@ -12,6 +12,7 @@ To navigate between pages I used React Router 6.
   - <a href="https://www.npmjs.com/package/@fortawesome/react-fontawesome">Fontawesome Icons</a>
   - <a href="https://react-hot-toast.com/">React Hot Toast</a>
   - <a href="https://api.coinpaprika.com/">Coinpaprika API</a>
+  - <a href="https://sass-lang.com/">SASS</a>
 
 **Screenshots**
 
