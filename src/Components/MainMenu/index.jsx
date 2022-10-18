@@ -15,15 +15,6 @@ export default function MainMenu() {
       .get(`${COIN_API}`)
       .then((res) => setCoinData(res.data))
       .catch((err) => console.log(err));
-
-    // const interval = setInterval(() => {
-    //   axios
-    //     .get(`${COIN_API}`)
-    //     .then((res) => setCoinData(res.data))
-    //     .catch((err) => console.log(err));
-    // }, 60000);
-
-    // return () => clearInterval(interval);
   }, []);
 
   return (
