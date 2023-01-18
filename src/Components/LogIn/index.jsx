@@ -4,6 +4,7 @@ import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import toast, {Toaster} from 'react-hot-toast';
+import bcrypt from 'bcryptjs';
 
 export default function LogIn() {
   const [loginemail, setLoginemail] = useState("");
@@ -16,10 +17,9 @@ export default function LogIn() {
     let email = localStorage.getItem("email").replace(/"/g, "");
     let psw = localStorage.getItem("password").replace(/"/g, "");
 
-    console.log(email);
-    console.log(psw);
+    const passwordCompare = bcrypt.compareSync(loginpassword, psw);
 
-    if (email === loginemail && psw === loginpassword) {
+    if (email === loginemail && passwordCompare) {
       toast.success("Successful log in!", {
         duration: 1000,
         style: {
@@ -32,7 +32,7 @@ export default function LogIn() {
       setTimeout(() => {
         setMenu(false);
       }, 1000);
-    } else if (email !== loginemail || psw !== loginpassword) {
+    } else if (email !== loginemail || !passwordCompare) {
       toast.error("Wrong email or password!", {
         duration: 1500,
         style: {
