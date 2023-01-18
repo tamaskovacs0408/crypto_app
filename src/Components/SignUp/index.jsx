@@ -21,8 +21,6 @@ export default function SignUp() {
     localStorage.setItem("email", JSON.stringify(email));
     localStorage.setItem("password", JSON.stringify(hashedPassword));
 
-    console.log('hashed password:' + hashedPassword)
-
     toast.success("Successful sign up!", {
       duration: 1000,
       style: {
