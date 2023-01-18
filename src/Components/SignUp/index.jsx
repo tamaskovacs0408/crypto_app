@@ -5,6 +5,7 @@ import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import toast, { Toaster } from "react-hot-toast";
+import bcrypt from "bcryptjs";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -15,8 +16,13 @@ export default function SignUp() {
   function handleFormSubmit(e) {
     e.preventDefault();
 
+    const hashedPassword = bcrypt.hashSync(password, 10)
+
     localStorage.setItem("email", JSON.stringify(email));
-    localStorage.setItem("password", JSON.stringify(password));
+    localStorage.setItem("password", JSON.stringify(hashedPassword));
+
+    console.log('hashed password:' + hashedPassword)
+
     toast.success("Successful sign up!", {
       duration: 1000,
       style: {
