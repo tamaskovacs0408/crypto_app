@@ -1,17 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { GLOBAL_DATA_API } from "../API";
 import Global from "./Global";
 import MenuNav from "../MenuNav";
+import useGlobalData from "../../Hooks/useGlobalData";
 
 export default function GlobalData() {
-  const [gData, setgData] = useState([]);
-
-  useEffect(() => {
-    fetch(GLOBAL_DATA_API)
-      .then(res => res.json())
-      .then(data => setgData(data))
-      .catch((err) => console.log(err));
-  }, []);
+  const gData = useGlobalData();
 
   return (
     <>
